@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --ff-primary: "Poppins", sans-serif;
+  --text-color: #303030;
+
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: #fafafa;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+#app {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 0.5rem 0.8rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.search button {
+  border: 1px solid rgb(200, 200, 200);
+  border-left: none;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+
+  background: var(--primary-color);
+}
+
+.search button:hover {
+  opacity: 0.9;
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--ff-primary);
+}
+
+table th {
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.6rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+table td {
+  padding: 1.6rem;
+  text-align: left;
+}
+
+table tr:nth-child(odd) {
+  background: #ddd;
+}
+
+table tr:nth-child(even) {
+  background: #eee;
+}
+
+td.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile a p {
+  font-weight: bold;
+}
+
+td .btn-delete {
+  color: red;
+}
